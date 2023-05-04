@@ -1,9 +1,14 @@
-
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Nav from './Components/Nav/Nav';
 
 function App() {
   return (
-    <h1>heloo</h1>
+    <>
+      <Nav />
+      <Routes>
+      </Routes>
+    </>
   );
 }
 
