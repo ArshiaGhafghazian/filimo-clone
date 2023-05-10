@@ -1,0 +1,38 @@
+@media screen and (max-width: 1230px) {
+    .three__items {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .off {
+        font-size: 0.8rem;
+    }
+    .off img {
+        width: 190px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .three__items {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .off {
+        font-size: 0.7rem;
+    }
+
+    .off img {
+        width: 160px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .off {
+        font-size: 0.6rem;
+    }
+
+    .off img {
+        width: 140px;
+    }
+}

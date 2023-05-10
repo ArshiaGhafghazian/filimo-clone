@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+body{
+    position: relative;
+}
+
 @font-face {
     font-family: 'Sans';
     src: local('Sans'), url(./assets/fonts/IRANSans-web.woff2) format('truetype');

@@ -1,0 +1,41 @@
+@media screen and (max-width:660px) {
+    .nav__container .button__container {
+        justify-content: space-around;
+        width: 300px;
+    }
+
+    .list__container{
+        justify-content: unset;
+    }
+    .list__container .more {
+        display: block;
+        margin-right: 10px;
+    }
+
+    .button__container .buy__account {
+        display: none;
+    }
+
+    .links__container {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+        top: 100px;
+        width: 100%;
+        right: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+    }
+
+    .links__container.active {
+        transition: 0.2s;
+        visibility: visible;
+        opacity: 1;
+        position: absolute;
+        top: 50px;
+        background-color: rgba(0, 0, 0, 0.589);
+
+    }
+}
