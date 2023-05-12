@@ -9,7 +9,8 @@
 }
 
 .dark {
-    background: radial-gradient(130% 44% at 41% 40%, rgba(0, 0, 0, 0) 0, #151515 100%);
+    /* background: radial-gradient(130% 44% at 41% 40%, rgba(0, 0, 0, 0) 0, #151515 100%); */
+    background: linear-gradient(rgba(0, 0, 0, 0.534),rgb(0, 0, 0));
     height: 500px;
     width: 100%;
     position: absolute;

@@ -20,33 +20,30 @@ const Nav = () => {
     const [toggle, setToggle] = useState("");
     console.log(toggle);
     return (
-        <div className="nav__area__container">
-            <div className="nav__container">
-                <div className="list__container">
-                    <div className="logo__container">
-                        <Link
-                            className=" logo"
-                            to="/filimo"
-                            title="رفتن به صفحه اصلی فیلیمو"
-                        >
-                            <img src={Logo} alt="Logo" />
-                        </Link>
-                    </div>
-                    <button onClick={() => setToggle(!toggle)} className="more">
-                        {!toggle ? "..." : "بستن"}
-                    </button>
-                    <div
-                        className={`links__container ${toggle ? "active" : ""}`}
+        <div className="nav__container">
+            <div className="list__container">
+                <div className="logo__container">
+                    <Link
+                        className=" logo"
+                        to="/filimo"
+                        title="رفتن به صفحه اصلی فیلیمو"
                     >
-                        <Link>
-                            <img
-                                src={fireIcon}
-                                alt="fire-icon"
-                                className="fire__logo"
-                            />
-                            <span>فیلیموتور</span>
-                        </Link>
-                        {/* <Link>
+                        <img src={Logo} alt="Logo" />
+                    </Link>
+                </div>
+                <button onClick={() => setToggle(!toggle)} className="more">
+                    {!toggle ? "..." : "بستن"}
+                </button>
+                <div className={`links__container ${toggle ? "active" : ""}`}>
+                    <Link>
+                        <img
+                            src={fireIcon}
+                            alt="fire-icon"
+                            className="fire__logo"
+                        />
+                        <span>فیلیموتور</span>
+                    </Link>
+                    {/* <Link>
                     <span>فیلم</span>
                 </Link>
                 <Link>
@@ -60,37 +57,36 @@ const Nav = () => {
                     <img className="horse__icon" src={horseIcon} alt="horse" />
                     <span>کودک</span>
                 </Link> */}
-                        <Link>
-                            <img
-                                className="filimo__logo"
-                                src={filmoLogo}
-                                alt="logo"
-                            />
-                            <span>فیلیمومدرسه</span>
-                        </Link>
-                        {/* <Link>
+                    <Link>
+                        <img
+                            className="filimo__logo"
+                            src={filmoLogo}
+                            alt="logo"
+                        />
+                        <span>فیلیمومدرسه</span>
+                    </Link>
+                    {/* <Link>
                     <span>مجموعه‌ها</span>
                 </Link> */}
-                        <Link>
-                            <img
-                                className="search__icon"
-                                src={searchIcon}
-                                alt="search-icon"
-                            />
-                            <span>جستجو</span>
-                        </Link>
-                    </div>
+                    <Link>
+                        <img
+                            className="search__icon"
+                            src={searchIcon}
+                            alt="search-icon"
+                        />
+                        <span>جستجو</span>
+                    </Link>
                 </div>
-                <div className="button__container">
-                    <button className="buy__account">
-                        <img src={tv} alt="tv-icon" />
-                        خرید اشتراک فیلیمو
-                    </button>
-                    {/* <button onClick={() => setToggle(!toggle)} className="more">
+            </div>
+            <div className="button__container">
+                <button className="buy__account">
+                    <img src={tv} alt="tv-icon" />
+                    خرید اشتراک فیلیمو
+                </button>
+                {/* <button onClick={() => setToggle(!toggle)} className="more">
                         {!toggle ? "بیشتر" : "بستن"}
                     </button> */}
-                    <button className="login__button">ورود</button>
-                </div>
+                <button className="login__button">ورود</button>
             </div>
         </div>
     );
