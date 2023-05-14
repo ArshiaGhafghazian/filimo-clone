@@ -1,16 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Nav from './Components/Nav/Nav';
-import Slider from './Components/Slider/Slider';
-import Best from './Components/Best/Best';
+import Home from './Components/Home/Home';
 
 function App() {
   return (
     <>
       <Nav />
-      <Slider />
-      <Best />
       <Routes>
+        <Route path='/' element={<Home />}/> 
       </Routes>
     </>
   );

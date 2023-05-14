@@ -16,7 +16,6 @@ import { slider, slideList } from "../../assets/functions/slider";
 
 const Slider = () => {
     const [index, setIndex] = useState(0);
-    console.log(index);
 
     useEffect(() => {
         const interval = setInterval(() => {

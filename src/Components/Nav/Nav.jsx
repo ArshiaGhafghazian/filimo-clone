@@ -18,7 +18,6 @@ import tv from "../../assets/icons/tv.png";
 
 const Nav = () => {
     const [toggle, setToggle] = useState("");
-    console.log(toggle);
     return (
         <div className="nav__container">
             <div className="list__container">

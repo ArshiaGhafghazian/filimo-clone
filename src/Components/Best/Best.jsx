@@ -1,38 +1,69 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, Outlet } from "react-router-dom";
 
-import { movieList } from "../../assets/movie/list"
+import { movieList, serieList } from "../../assets/movie/list";
 
 //style:
 import "./Best.css";
+import BestDescription from "../BestDescription/BestDescription";
 
 const Best = () => {
     const [toggle, setToggle] = useState(true);
+    const [index, setIndex] = useState(0);
+    console.log(index);
     return (
         <div className="best__container">
-            <div className="title">
-                <h2>محبوب‌ترین‌های فیلیمو</h2>
-                <div className="switch">
-                    <Link
-                        onClick={() => setToggle(!toggle)}
-                        className={`switch__link ${toggle ? "active" : ""}`}
-                    >
-                        سریال
-                    </Link>
-                    <Link
-                        onClick={() => setToggle(!toggle)}
-                        className={`switch__link ${!toggle ? "active" : ""}`}
-                    >
-                        فیلم
-                    </Link>
+            <div className="wrapper">
+                <div className="title">
+                    <h2>محبوب‌ترین‌های فیلیمو</h2>
+                    <div className="switch">
+                        <Link
+                            onClick={() => {
+                                setToggle(!toggle);
+                                setIndex(0);
+                            }}
+                            className={`switch__link ${toggle ? "active" : ""}`}
+                        >
+                            سریال
+                        </Link>
+                        <Link
+                            onClick={() => {
+                                setToggle(!toggle);
+                                setIndex(0);
+                            }}
+                            className={`switch__link ${
+                                !toggle ? "active" : ""
+                            }`}
+                        >
+                            فیلم
+                        </Link>
+                    </div>
                 </div>
             </div>
-            <div className="best" onMouseMove={(e)=>console.log(e.pageX)}>
-                {toggle ?
-                movieList[0].map(item=> <Link><img src={item.thumb} /></Link>) :
-                movieList[1].map(item=> <Link><img src={item.thumb} /></Link>)
-                }
+            <div className="best">
+                {!toggle
+                    ? movieList.map((item) => (
+                          <Link>
+                              <img
+                                  className={index === item.id ? "active" : ""}
+                                  src={item.thumb}
+                                  key={item.id}
+                                  onClick={() => setIndex(item.id)}
+                              />
+                          </Link>
+                      ))
+                    : serieList.map((item) => (
+                          <Link>
+                              <img
+                                  className={index === item.id ? "active" : ""}
+                                  src={item.thumb}
+                                  key={item.id}
+                                  onClick={() => setIndex(item.id)}
+                              />
+                          </Link>
+                      ))}
             </div>
+            <BestDescription toggle={toggle} index={index} />
         </div>
     );
 };

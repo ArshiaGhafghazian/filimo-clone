@@ -2,6 +2,10 @@
     padding-top: 500px;
     background-color: black;
     color: white;
+    width: 100%;
+}
+
+.best__container .wrapper {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -11,11 +15,14 @@
     width: 330px;
     justify-content: space-around;
     align-items: center;
+    max-width: 1200px;
 }
 
 .best__container .title h2 {
     font-weight: bolder;
     font-size: 16px;
+
+
 }
 
 .best__container .title .switch {
@@ -46,16 +53,23 @@
     width: 1200px;
     margin: 30px auto;
     justify-content: space-between;
+    align-items: center;
 
 }
 
 .best__container .best img {
-    border-radius: 20px;
+    border-radius: 10px;
+    width: 100%;
     opacity: 0.65;
-    transition: 0.5s;
+    transition: 0.2s;
+}
+.best__container .best img.active {
+    width: 110%;
+    opacity: 1;
+    border: 2px solid white;
+    transition: 0.2s;
 }
 
 .best__container .best img:hover {
-    border-radius: 20px;
     opacity: 1;
 }
