@@ -27,6 +27,7 @@
     position: absolute;
     width: 100%;
     z-index: 2;
+    display: flex;
 }
 
 .best__description__container .bd__wrapper {
@@ -39,6 +40,7 @@
     flex-direction: column;
     height: 190px;
     justify-content: space-between;
+    padding: 10px;
 }
 
 .bd__flex .best__title {

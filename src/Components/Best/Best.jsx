@@ -48,6 +48,7 @@ const Best = () => {
                                   className={index === item.id ? "active" : ""}
                                   src={item.thumb}
                                   key={item.id}
+                                  alt={`item no ${item.id}`}
                                   onClick={() => setIndex(item.id)}
                               />
                           </Link>
@@ -58,6 +59,7 @@ const Best = () => {
                                   className={index === item.id ? "active" : ""}
                                   src={item.thumb}
                                   key={item.id}
+                                  alt={`item no ${item.id}`}
                                   onClick={() => setIndex(item.id)}
                               />
                           </Link>
