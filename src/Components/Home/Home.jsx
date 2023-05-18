@@ -4,6 +4,7 @@ import Best from "../Best/Best";
 import Devices from "../Devices/Devices";
 import Watch from "../Watch/Watch";
 import Kids from "../Kids/Kids";
+import Buy from "../Buy/Buy";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Devices />
             <Watch />
             <Kids />
+            <Buy />
         </>
     );
 };
