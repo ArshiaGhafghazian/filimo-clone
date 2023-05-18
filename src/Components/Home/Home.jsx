@@ -3,6 +3,7 @@ import Slider from "../Slider/Slider";
 import Best from "../Best/Best";
 import Devices from "../Devices/Devices";
 import Watch from "../Watch/Watch";
+import Kids from "../Kids/Kids";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Best />
             <Devices />
             <Watch />
+            <Kids />
         </>
     );
 };
