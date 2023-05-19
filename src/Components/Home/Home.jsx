@@ -5,10 +5,12 @@ import Devices from "../Devices/Devices";
 import Watch from "../Watch/Watch";
 import Kids from "../Kids/Kids";
 import Buy from "../Buy/Buy";
+import Nav from "../Nav/Nav";
 
 const Home = () => {
     return (
         <>
+            <Nav />
             <Slider />
             <Best />
             <Devices />

@@ -24,7 +24,7 @@ const Nav = () => {
                 <div className="logo__container">
                     <Link
                         className=" logo"
-                        to="/filimo"
+                        to="/"
                         title="رفتن به صفحه اصلی فیلیمو"
                     >
                         <img src={Logo} alt="Logo" />
@@ -85,7 +85,9 @@ const Nav = () => {
                 {/* <button onClick={() => setToggle(!toggle)} className="more">
                         {!toggle ? "بیشتر" : "بستن"}
                     </button> */}
-                <button className="login__button">ورود</button>
+                <Link to="/login">
+                    <button className="login__button">ورود</button>
+                </Link>
             </div>
         </div>
     );
